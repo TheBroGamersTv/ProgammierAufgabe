@@ -15,6 +15,8 @@ Sachen die erstellt werden müssen:
 
 -Map
 
+-loadingbar
+
 -Textures
 
 -Gameplay
