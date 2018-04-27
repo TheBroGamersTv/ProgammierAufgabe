@@ -1,0 +1,5 @@
+<b>Start</b> wird ausgeführt beim starten
+<b>Update</b> wird jeden frame ausgeführt
+<b>FixUpdate</b> wird bei jeder Physic ausgeführt
+deltaTime ist eine variable mit der man die zwei zwischen den frames ausrechnet 
+wenn man eine variable public nennt kommt sie im Konstructor vor und man kann sie beliebig verändern
