@@ -3,3 +3,4 @@
 <b>FixUpdate</b> wird bei jeder Physic ausgeführt
 deltaTime ist eine variable mit der man die zwei zwischen den frames ausrechnet 
 wenn man eine variable public nennt kommt sie im Konstructor vor und man kann sie beliebig verändern
+Rigiged body ist dafür da einen objekt körper form zu geben und noch interagation mit physics
