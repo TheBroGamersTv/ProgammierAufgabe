@@ -8,18 +8,11 @@ Methoden Namen wenn es geht auf english.
 
 Sachen die erstellt werden müssen:
 
-Menü
-
-Player
-
+-Menü
+-Player
 -Map
-
 -Textures
-
 -Gameplay
-
 -Weapons?
-
 -Timereverse?
-
 -Camera follow Player
