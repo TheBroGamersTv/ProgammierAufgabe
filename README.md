@@ -13,6 +13,8 @@ Sachen die erstellt werden müssen:
 
 -Player
 
+  -player Interface
+  
 -Map
 
 -loadingbar
