@@ -19,6 +19,9 @@ Sachen die erstellt werden müssen:
 
 -loadingbar
 
+-tutorial 
+  -text
+
 -Textures
 
 -Gameplay
