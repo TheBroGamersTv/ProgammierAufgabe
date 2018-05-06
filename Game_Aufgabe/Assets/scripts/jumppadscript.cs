@@ -20,8 +20,6 @@ public class jumppadscript : MonoBehaviour {
         {
             player.Jumping = true;
             
-           
-            
             player.JUMP(40f);
             
         }
