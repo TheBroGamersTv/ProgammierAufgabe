@@ -22,6 +22,8 @@ public class stats : MonoBehaviour {
         {
             level++;
             EXPtoNExtLvl = (EXPtoNExtLvl / 100) * 20 * level;
+            Life += (Life / 100) * 20 * level;
+            Damage += 5;
         }
         if (Life == 0)
         {

@@ -61,7 +61,26 @@ public class PlayerContoller : MonoBehaviour
             Jumping = false;
         }
     }
-
+    public void JUMP(float number)
+    {
+        if (player.isGrounded)
+        {
+            if (Jumping == false)
+            {
+                upforce = (-gravity);
+            }
+            else
+            {
+                upforce = negativgravityforce*number;
+            }
+        }
+        else
+        {
+            upforce += (-gravity) * Time.deltaTime;
+            upforce = Mathf.Clamp(upforce, -50, negativgravityforce);
+            Jumping = false;
+        }
+    }
 
     void Movement()
     {

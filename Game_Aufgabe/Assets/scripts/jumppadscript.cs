@@ -19,7 +19,11 @@ public class jumppadscript : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             player.Jumping = true;
-            player.JUMP();
+            
+           
+            
+            player.JUMP(40f);
+            
         }
     }
 }
