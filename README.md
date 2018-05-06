@@ -9,25 +9,37 @@ Methoden Namen wenn es geht auf english.
 
 Sachen die erstellt werden müssen:
 
--Menü
+-Menü -Eric
 
--Player
+-Player - edu
 
-  -player Interface
+  -player Interface - Eric
   
--Map
+-Npc -Edu
+  
+-Map -Eric
 
--loadingbar
+-loadingbar -Eric
 
 -tutorial 
   -text
 
 -Textures
 
--Gameplay
+-Gameplay 
 
 -Weapons?
 
 -Timereverse?
 
--Camera follow Player
+-Camera follow Player ( 3fps is in produktion)
+
+-Jumpads (done)
+
+-Inviorment - Eric
+
+-Torch -ERic
+
+-background with time changing - ERic
+
+-Offscreen Target -edu
