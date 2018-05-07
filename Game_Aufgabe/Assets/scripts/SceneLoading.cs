@@ -1,0 +1,26 @@
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+
+public class SceneLoading : MonoBehaviour
+{
+
+    //void OnGUI()
+    //{
+    //    GUI.Box(new Rect(10, Screen.height - 100, 100, 90), "Change Scene");
+    //    if (GUI.Button(new Rect(20, Screen.height - 70, 80, 20), "Next"))
+    //        LoadNextScene();
+    //    if (GUI.Button(new Rect(20, Screen.height - 40, 80, 20), "Back"))
+    //        LoadPreScene();
+    //}
+    
+    void LoadNextScene()
+    {
+        int nextLevel = SceneManager.sceneCount + 1;
+        if (nextLevel >= SceneManager.sceneCount)
+            nextLevel = 1;
+
+        SceneManager.LoadScene(nextLevel);
+
+    }
+}
