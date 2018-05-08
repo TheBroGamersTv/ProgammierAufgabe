@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stats : MonoBehaviour {
+public class stats {
 
     public int level;
     public int Life;
@@ -11,23 +11,29 @@ public class stats : MonoBehaviour {
     public int EXP = 0;
     
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+	public void SetStatstoLevel(int setlevel)
+    {
+        for (int i = 0; i < setlevel; i++)
+        {
+            level++;
+            Life += (Life / 100) * 20 * level;
+            Damage += 5;
+        }
+    }
+	public void TakingDamage(int dmg)
+    {
+        Life -= dmg;
+    }
 	// Update is called once per frame
-	void Update () {
+	public void EncreseLevel()
+    {
 		if(EXPtoNExtLvl<=EXP)
         {
             level++;
             EXPtoNExtLvl = (EXPtoNExtLvl / 100) * 20 * level;
             Life += (Life / 100) * 20 * level;
             Damage += 5;
-        }
-        if (Life == 0)
-        {
-            //sterbens sequenz;
+            EXP -= EXPtoNExtLvl;
         }
 	}
 }
