@@ -40,10 +40,14 @@ Sachen die erstellt werden müssen:
 
 -Torch -ERic
 
--background with time changing - ERic
+-background with time changing (not so important)- ERic
 
 2 classes , stats and inventory - edu
 
 -Offscreen Target -edu
 
 -teleporter - edu
+
+extra gameplay - eric
+
+hall base - eric
