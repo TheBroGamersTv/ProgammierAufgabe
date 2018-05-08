@@ -42,4 +42,8 @@ Sachen die erstellt werden müssen:
 
 -background with time changing - ERic
 
+2 classes , stats and inventory - edu
+
 -Offscreen Target -edu
+
+-teleporter - edu
