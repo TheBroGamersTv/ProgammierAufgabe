@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class stats {
-
+    //this is a normal c# script for the stats , it is made for enemys and the player.
     public int level;
     public int Life;
     public int Damage;
@@ -24,7 +24,7 @@ public class stats {
     {
         Life -= dmg;
     }
-	// Update is called once per frame
+	
 	public void EncreseLevel()
     {
 		if(EXPtoNExtLvl<=EXP)
