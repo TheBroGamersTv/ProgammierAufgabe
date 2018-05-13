@@ -17,6 +17,8 @@ public class PlayerContoller : MonoBehaviour
     float moveforwbackw;
     float movesideways;
     float upforce;
+    bool issprinting = false;
+    
 
     float LOOKX;
     float LOOKY;
@@ -33,7 +35,10 @@ public class PlayerContoller : MonoBehaviour
     {
 
         Movement();
-
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            issprinting = !issprinting;
+        }
         //with this funktion we ask if the button is pressed in the input menü Interact witch is space.
         if (Input.GetButtonDown("JUMP"))
         {
@@ -112,7 +117,14 @@ public class PlayerContoller : MonoBehaviour
             Camera.transform.Rotate(LOOKY, 0, 0);
         }
         //we set the rotation * the movement to look in that direktion
-        movement = transform.rotation * movement;
+        if (issprinting)
+        {
+            movement = transform.rotation * movement*2.5f;
+        }
+        else
+        {
+            movement = transform.rotation * movement;
+        }
         //luckily unity has made a method where theplayercontoller moves to the point we are telling him.
         //time.deltaTime is a funktion where for every Pc it looks beween the time of the last frame and the new Frame , that means if you have a good pc you have a small number
         //but if you have a bad pc you have a big number so the movement is for everyone constant.
