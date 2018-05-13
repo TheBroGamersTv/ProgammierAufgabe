@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - jumppaf
+  - camera
+  - chest
   layers:
   - Default
   - TransparentFX
