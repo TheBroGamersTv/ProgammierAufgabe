@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class stats {
     //this is a normal c# script for the stats , it is made for enemys and the player.
+    //debug
     public int level;
     public int Life;
     public int Damage;
