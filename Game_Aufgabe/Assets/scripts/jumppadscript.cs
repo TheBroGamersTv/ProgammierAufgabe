@@ -23,7 +23,7 @@ public class jumppadscript : MonoBehaviour {
         {
             player.Jumping = true;
             
-            player.JUMP(60f);
+            player.JUMP(65f);
             //for this Method look pls in the PlayerContoller script.
         }
     }

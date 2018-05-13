@@ -25,9 +25,10 @@ GameObject:
   - component: {fileID: 33258028242604532}
   - component: {fileID: 114505260360774764}
   - component: {fileID: 64009141655291486}
+  - component: {fileID: 114804214740123444}
   m_Layer: 0
   m_Name: chest bottom#
-  m_TagString: Untagged
+  m_TagString: chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 127
@@ -46,8 +47,8 @@ GameObject:
   - component: {fileID: 114407474929963590}
   - component: {fileID: 64091913780753906}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: chest top
+  m_TagString: chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 127
@@ -58,14 +59,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1194015220267296}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.69903964, z: 0, w: 0.71508294}
   m_LocalPosition: {x: -1.6689403, y: -0.524, z: -6.895334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4818458749157590}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0, y: -88.7, z: 0}
 --- !u!4 &4818458749157590
 Transform:
   m_ObjectHideFlags: 1
@@ -1635,6 +1636,22 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114804214740123444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1194015220267296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a7356b91c1b37148963c2ec5c4d3d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  newlayermask:
+    serializedVersion: 2
+    m_Bits: 4294967039
+  camer: {fileID: 0}
 --- !u!114 &114854402144081356
 MonoBehaviour:
   m_ObjectHideFlags: 1
