@@ -32,6 +32,8 @@ Sachen die erstellt werden müssen:
 
 -Timereverse?
 
+-timestop last chance
+
 -Camera follow Player ( 3fps is in produktion)
 
 -Jumpads (done)
