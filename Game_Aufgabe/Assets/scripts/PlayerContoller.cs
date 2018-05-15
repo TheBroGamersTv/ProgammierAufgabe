@@ -19,6 +19,7 @@ public class PlayerContoller : MonoBehaviour
     float upforce;
     bool issprinting = false;
     
+    
 
     float LOOKX;
     float LOOKY;
@@ -28,6 +29,7 @@ public class PlayerContoller : MonoBehaviour
     {
         //here we attach the playercontoller to player when the script has a charaktercontroller
         player = this.GetComponent<CharacterController>();
+       
     }
 
     // Update is called once per frame

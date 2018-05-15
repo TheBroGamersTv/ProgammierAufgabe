@@ -8,7 +8,7 @@ public class CheatInteract : MonoBehaviour
 {
     //this is the script for the chest interct , the radis is witch in with the player can intercat with the chest.
     //we get the transform player for the position where the player is going to stand.
-    float radius = 4f;
+   
     public Transform player;
     // Use this for initialization
     public LayerMask newlayermask;
