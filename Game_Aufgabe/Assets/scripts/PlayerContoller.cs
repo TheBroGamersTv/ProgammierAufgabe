@@ -18,8 +18,11 @@ public class PlayerContoller : MonoBehaviour
     float movesideways;
     float upforce;
     bool issprinting = false;
-    
-    
+    public bool Timestop = false;
+    public bool TimestopAllowed = true;
+    public float normaltime = 1000;
+    public float MaxTimestoptime = 2f;
+    public float currenttimestoptime = 0;
 
     float LOOKX;
     float LOOKY;
@@ -37,6 +40,23 @@ public class PlayerContoller : MonoBehaviour
     {
 
         Movement();
+        if(Input.GetKeyDown(KeyCode.Z)&&TimestopAllowed)
+        {
+            Timestop = true;
+            TimestopAllowed = false;
+            Time.timeScale = 0.001f;
+        }
+        //if(Timestop)
+        //{
+        //    currenttimestoptime = Time.deltaTime;
+        //    if(currenttimestoptime<=MaxTimestoptime)
+        //    {
+        //        currenttimestoptime = 0;
+        //        Timestop = false;
+        //        Time.timeScale=1.0f;
+        //    }
+        //}
+        
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
             issprinting = !issprinting;
@@ -68,7 +88,10 @@ public class PlayerContoller : MonoBehaviour
         else
         {
             //when the player is falling some longer time, the gravity increses with tim.deltaTime,tim.deltaTime means 1 sec
-            upforce += (-gravity) * Time.deltaTime;
+            if(!Timestop)
+                upforce += (-gravity) * Time.deltaTime;
+            else
+                upforce += (-gravity) * Time.deltaTime*normaltime;
             //here we set the player a max min gravity 
             upforce = Mathf.Clamp(upforce, -50, negativgravityforce);
             Jumping = false;
@@ -130,6 +153,13 @@ public class PlayerContoller : MonoBehaviour
         //luckily unity has made a method where theplayercontoller moves to the point we are telling him.
         //time.deltaTime is a funktion where for every Pc it looks beween the time of the last frame and the new Frame , that means if you have a good pc you have a small number
         //but if you have a bad pc you have a big number so the movement is for everyone constant.
-        player.Move(movement * Time.deltaTime);
+        if (!Timestop)
+        {
+            player.Move(movement * Time.deltaTime);
+        }
+        else
+        {
+            player.Move(movement*Time.deltaTime*normaltime*1000);
+        }
     }
 }

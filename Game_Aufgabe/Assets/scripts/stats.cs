@@ -11,24 +11,30 @@ public class stats {
     public int Damage;
     public int EXPtoNExtLvl =100;
     public int EXP = 0;
-    
 
-	public void SetStatstoLevel(int setlevel)
+
+    public void SetStatstoLevel(int setlevel)
     {
         for (int i = 0; i < setlevel; i++)
         {
             level++;
             Maxlife += (Maxlife / 100) * 20 * level;
+            EXPtoNExtLvl = (EXPtoNExtLvl / 100) * 20 * level;
             Damage += 5;
         }
-       
+
+
+    }
+    public void EncreaseEXP(int number)
+    {
+        EXP += number;
     }
 	public void TakingDamage(int dmg)
     {
         Life -= dmg;
     }
 	
-	public void EncreseLevel()
+	public void EncreaseLevel()
     {
 		if(EXPtoNExtLvl<=EXP)
         {
