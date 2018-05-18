@@ -125,6 +125,7 @@ public class PlayerContoller : MonoBehaviour
         movesideways = Input.GetAxis("Horizontal") * movementspeed;
         //with this funktion we ask if the button is pressed in the input menü Vertical witch is W and S.
         moveforwbackw = Input.GetAxis("Vertical") * movementspeed;
+        
         //we initalisize a vector3 with 3 numbers, where the player is going
         Vector3 movement = new Vector3(movesideways, upforce, moveforwbackw);
 
