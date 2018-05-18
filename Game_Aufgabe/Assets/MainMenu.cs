@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour {
+public class MainMenu : MonoBehaviour
+{
 
-	public void StartGame()
+    public void StartGame()
     {
-        //SceneManager.LoadScene("Game_Aufgabe.unity");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Debug.Log("Starting to load scene");
     }
-  
-	public void ExitGame()
+
+    public void ExitGame()
     {
         Application.Quit();
         Debug.Log("Quiting Game...");

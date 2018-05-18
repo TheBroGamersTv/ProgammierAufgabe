@@ -11,7 +11,7 @@ public class PlayerContoller : MonoBehaviour
     public float negativgravityforce = 4f;
     public float gravity = 5f;
     CharacterController player;
-    public bool INvertedAXis = false;
+    public static bool InvertedAxis = false;
     public bool Jumping = false;
     public GameObject Camera;
     float moveforwbackw;
@@ -67,6 +67,11 @@ public class PlayerContoller : MonoBehaviour
             Jumping = true;
         }
         JUMP();
+    }
+    public void Inverted(bool IsInverted)
+    {
+        InvertedAxis = IsInverted;
+        Debug.Log(IsInverted);
     }
 
     public void JUMP()
@@ -134,7 +139,7 @@ public class PlayerContoller : MonoBehaviour
         LOOKY = Input.GetAxis("Mouse Y") * RotationspeedY;
         //the trick here is we want to move the player by the x and the Camera by y and when wie dont inverted it, it looks the opposite dir
         transform.Rotate(0, LOOKX, 0);
-        if (INvertedAXis)
+        if (InvertedAxis)
         {
             Camera.transform.Rotate(-LOOKY, 0, 0);
         }
