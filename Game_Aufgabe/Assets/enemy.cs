@@ -10,24 +10,44 @@ public class enemy : MonoBehaviour {
     public bool Playerwasseen;
     public GameObject Player;
     public PlayerStats playerstats;
-    public CharacterController Enemy;
+    int MoveSpeed = 4;
+    int MaxDist = 25;
+    int MinDist = 10;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         Currentstats.SetStatstoLevel(currentlevel);
         Player =  GameObject.FindGameObjectWithTag("Player");
         playerstats = Player.GetComponent<PlayerStats>();
-        Enemy = this.GetComponent<CharacterController>();
+        
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Enemy.Move(new Vector3(0.01f,0,0.01f));
+        transform.LookAt(Player.transform);
 
-		if(Currentstats.Life<=0)
+        if (Vector3.Distance(transform.position, Player.transform.position) >= MinDist)
+        {
+
+            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+
+
+
+            if (Vector3.Distance(transform.position, Player.transform.position) <= MaxDist)
+            {
+                Shoot();
+            }
+
+        }
+
+        if (Currentstats.Life<=0)
         {
             Destroy(this.gameObject);
         }
 	}
+    public void Shoot()
+    {
+
+    }
 }

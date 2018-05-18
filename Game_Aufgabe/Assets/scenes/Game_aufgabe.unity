@@ -1036,9 +1036,8 @@ MonoBehaviour:
   currentlevel: 12
   VIewangle: 110
   Playerwasseen: 0
-  Player: {fileID: 0}
+  Player: {fileID: 1851633456}
   playerstats: {fileID: 0}
-  Enemy: {fileID: 0}
 --- !u!143 &617878798
 CharacterController:
   m_ObjectHideFlags: 0
