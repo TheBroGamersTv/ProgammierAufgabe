@@ -12,7 +12,7 @@ public class PlayerContoller : MonoBehaviour
     public float negativgravityforce = 4f;
     public float gravity = 5f;
     CharacterController player;
-    public static bool InvertedAxis = false;
+    public bool InvertedAxis = false;
     public bool Jumping = false;
     public GameObject Camera;
     float moveforwbackw;
