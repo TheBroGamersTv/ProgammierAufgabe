@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerContoller : MonoBehaviour
 {
-
+    [Header ("Playermovemt")]
     public float movementspeed = 2f;
     public float RotationspeedX = 2f;
     public float RotationspeedY = 2f;
@@ -18,6 +19,7 @@ public class PlayerContoller : MonoBehaviour
     float movesideways;
     float upforce;
     bool issprinting = false;
+    [Header("Timestop")]
     public bool Timestop = false;
     public bool TimestopAllowed = true;
     public float normaltime = 1000;
@@ -42,9 +44,10 @@ public class PlayerContoller : MonoBehaviour
         Movement();
         if(Input.GetKeyDown(KeyCode.Z)&&TimestopAllowed)
         {
-            Timestop = true;
-            TimestopAllowed = false;
-            Time.timeScale = 0.001f;
+            //Timestop = true;
+            //TimestopAllowed = false;
+            //Time.timeScale = 0.001f;
+            INvertedAXis = !INvertedAXis;
         }
         //if(Timestop)
         //{
