@@ -14,7 +14,7 @@ public class enemy : MonoBehaviour {
     int MoveSpeed = 4;
     int MaxDist = 25;
     int MinDist = 10;
-    int Life;
+    float Life;
 
     // Use this for initialization
     void Start () {

@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 33595803408273498}
   - component: {fileID: 23639590914286898}
   - component: {fileID: 114231209257981190}
+  - component: {fileID: 114458147157138154}
   m_Layer: 0
   m_Name: ENEMY
   m_TagString: Enemy
@@ -315,9 +316,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6eb6f0487dbc6c41800699b3d0d8197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentlevel: 13
+  Currentstats: {fileID: 114458147157138154}
+  currentlevel: 0
   VIewangle: 110
   Range: 35
   Playerwasseen: 0
   Player: {fileID: 0}
   playerstats: {fileID: 0}
+--- !u!114 &114458147157138154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1749066776597198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54264bcbf86a855448b11ad23dc69816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  Life: 120
+  Maxlife: 100
+  Damage: 0
+  EXPtoNExtLvl: 100
+  EXP: 0
