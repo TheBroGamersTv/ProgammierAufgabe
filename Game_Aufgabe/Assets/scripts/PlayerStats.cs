@@ -10,7 +10,7 @@ public class PlayerStats : MonoBehaviour
     public GameObject Player;
     public Slider LifeSlider;
     public Slider XPSlider;
-    public float Life = 100;
+    public float Life;
     public float XP;
 
     // Use this for initialization
