@@ -33,12 +33,21 @@ public class stats : MonoBehaviour
         EXP += number;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public  void TakingDamage(int dmg)
     {
         Life -= dmg;
     }
 	
 	 public void EncreaseLevel()
+=======
+    public void TakingDamage(int dmg)
+    {
+        Life -= dmg;
+    }
+
+    public void EncreaseLevel()
+>>>>>>> c9c505698378a6c81881a567111e326e1b20b26c
 =======
     public void TakingDamage(int dmg)
     {
