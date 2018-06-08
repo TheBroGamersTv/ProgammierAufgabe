@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stats {
+public class stats : MonoBehaviour
+{
     //this is a normal c# script for the stats , it is made for enemys and the player.
     //debug
     public int level;
-    public int Life;
-    public int Maxlife;
+    public float Life = 100;
+    public int Maxlife = 100;
     public int Damage;
-    public int EXPtoNExtLvl =100;
-    public int EXP = 0;
+    public int EXPtoNExtLvl = 100;
+    public float EXP = 0;
 
 
     public void SetStatstoLevel(int setlevel)
@@ -29,14 +30,14 @@ public class stats {
     {
         EXP += number;
     }
-	public void TakingDamage(int dmg)
+    public void TakingDamage(int dmg)
     {
         Life -= dmg;
     }
-	
-	public void EncreaseLevel()
+
+    public void EncreaseLevel()
     {
-		if(EXPtoNExtLvl<=EXP)
+        if (EXPtoNExtLvl <= EXP)
         {
             level++;
             EXPtoNExtLvl = (EXPtoNExtLvl / 100) * 20 * level;
@@ -44,5 +45,5 @@ public class stats {
             Damage += 5;
             EXP -= EXPtoNExtLvl;
         }
-	}
+    }
 }
