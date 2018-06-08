@@ -14,6 +14,7 @@ public class enemy : MonoBehaviour {
     int MoveSpeed = 4;
     int MaxDist = 25;
     int MinDist = 10;
+    int Life;
 
     // Use this for initialization
     void Start () {
@@ -60,6 +61,10 @@ public class enemy : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+        else
+        {
+            Life = Currentstats.Life;
+        }
     }
     public void Movetoplayer()
     {
@@ -73,6 +78,10 @@ public class enemy : MonoBehaviour {
 
 
             if (Vector3.Distance(transform.position, Player.transform.position) <= MaxDist)
+            {
+                Shoot();
+            }
+            else
             {
                 Shoot();
             }
