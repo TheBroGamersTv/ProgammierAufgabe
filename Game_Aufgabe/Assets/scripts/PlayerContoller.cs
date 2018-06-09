@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerContoller : MonoBehaviour
 {
-    [Header ("Playermovemt")]
+    [Header("Playermovemt")]
     public float movementspeed = 2f;
     public float RotationspeedX = 2f;
     public float RotationspeedY = 2f;
@@ -25,16 +25,17 @@ public class PlayerContoller : MonoBehaviour
     public float normaltime = 1000;
     public float MaxTimestoptime = 2f;
     public float currenttimestoptime = 0;
-
+    public Inventory inv;
     float LOOKX;
     float LOOKY;
 
     // Use this for initialization
     void Start()
     {
+        
         //here we attach the playercontoller to player when the script has a charaktercontroller
         player = this.GetComponent<CharacterController>();
-       
+
     }
 
     // Update is called once per frame
@@ -42,12 +43,12 @@ public class PlayerContoller : MonoBehaviour
     {
 
         Movement();
-        if(Input.GetKeyDown(KeyCode.Z)&&TimestopAllowed)
+        if (Input.GetKeyDown(KeyCode.Z) && TimestopAllowed)
         {
             //Timestop = true;
             //TimestopAllowed = false;
             //Time.timeScale = 0.001f;
-            
+
         }
         //if(Timestop)
         //{
@@ -59,8 +60,8 @@ public class PlayerContoller : MonoBehaviour
         //        Time.timeScale=1.0f;
         //    }
         //}
-        
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             issprinting = !issprinting;
         }
@@ -70,6 +71,12 @@ public class PlayerContoller : MonoBehaviour
             Jumping = true;
         }
         JUMP();
+        if (Input.GetMouseButton(1))
+        {
+           //Camera cam = Camera.camera;
+         //  Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+           
+        }
     }
     public void Inverted(bool IsInverted)
     {
@@ -96,10 +103,10 @@ public class PlayerContoller : MonoBehaviour
         else
         {
             //when the player is falling some longer time, the gravity increses with tim.deltaTime,tim.deltaTime means 1 sec
-            if(!Timestop)
+            if (!Timestop)
                 upforce += (-gravity) * Time.deltaTime;
             else
-                upforce += (-gravity) * Time.deltaTime*normaltime;
+                upforce += (-gravity) * Time.deltaTime * normaltime;
             //here we set the player a max min gravity 
             upforce = Mathf.Clamp(upforce, -50, negativgravityforce);
             Jumping = false;
@@ -116,7 +123,7 @@ public class PlayerContoller : MonoBehaviour
             }
             else
             {
-                upforce = negativgravityforce*number;
+                upforce = negativgravityforce * number;
             }
         }
         else
@@ -133,7 +140,7 @@ public class PlayerContoller : MonoBehaviour
         movesideways = Input.GetAxis("Horizontal") * movementspeed;
         //with this funktion we ask if the button is pressed in the input menü Vertical witch is W and S.
         moveforwbackw = Input.GetAxis("Vertical") * movementspeed;
-        
+
         //we initalisize a vector3 with 3 numbers, where the player is going
         Vector3 movement = new Vector3(movesideways, upforce, moveforwbackw);
 
@@ -153,7 +160,7 @@ public class PlayerContoller : MonoBehaviour
         //we set the rotation * the movement to look in that direktion
         if (issprinting)
         {
-            movement = transform.rotation * movement*2.5f;
+            movement = transform.rotation * movement * 2.5f;
         }
         else
         {
@@ -168,7 +175,7 @@ public class PlayerContoller : MonoBehaviour
         }
         else
         {
-            player.Move(movement*Time.deltaTime*normaltime*1000);
+            player.Move(movement * Time.deltaTime * normaltime * 1000);
         }
     }
 }
