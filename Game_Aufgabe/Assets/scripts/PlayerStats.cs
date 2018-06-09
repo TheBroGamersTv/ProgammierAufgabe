@@ -12,7 +12,7 @@ public class PlayerStats : MonoBehaviour
     public Slider XPSlider;
     public float Life;
     public float XP;
-
+    public float Damege;
 
 
     // Use this for initialization
@@ -30,9 +30,15 @@ public class PlayerStats : MonoBehaviour
         }
         
     }
-
-    void Update()//Updating
+    private void Update()
     {
+       
+           
+         
+    }
+    void LateUpdate()//Updating
+    {
+
         Life = playerstats.Life / playerstats.Maxlife * 100;
         SetHealth();
 
@@ -44,21 +50,24 @@ public class PlayerStats : MonoBehaviour
     {
        // Life= Life / playerstats.Maxlife * 100;
         LifeSlider.value = Life;
-        Debug.Log(Life);
+        
     }
     public void SetXP()//setting the EXPbar UI to the XP
     {
         XPSlider.value = XP;
-        Debug.Log(XP);
+        
     }
     
     public int DoneDamage()
     {
         return playerstats.Damage;
     }
-    public void TakeDamage(int dmg)
+    public void TakeDamage(float dmg)
     {
-        playerstats.TakingDamage(dmg);
+        
+       Damege  = dmg;
+        playerstats.TakingDamage(Damege);
+        Debug.Log(dmg);
     }
 
     public void GetEXP(int number)

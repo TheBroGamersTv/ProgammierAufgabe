@@ -15,6 +15,11 @@ public class enemy : MonoBehaviour {
     int MaxDist = 25;
     int MinDist = 10;
     float Life;
+    public float firerate = 1f;
+    public float firecountdown = 0f;
+
+    public GameObject Bullet;
+    public Transform firepoint;
 
     // Use this for initialization
     void Start () {
@@ -75,22 +80,25 @@ public class enemy : MonoBehaviour {
 
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
 
-
-
+        }
+        else
+        {
             if (Vector3.Distance(transform.position, Player.transform.position) <= MaxDist)
             {
                 Shoot();
             }
-            else
-            {
-                Shoot();
-            }
-
         }
 
     }
     public void Shoot()
     {
-
+        GameObject bullet = null;
+        if(firecountdown<=0f)
+        {
+            firecountdown = 1f / firerate;
+            bullet=(GameObject)Instantiate(Bullet, firepoint.position, firepoint.rotation);
+            bullet.GetComponent<Bullet>().Getdmg(Currentstats.Damage);
+        }
+        firecountdown -= Time.deltaTime;
     }
 }

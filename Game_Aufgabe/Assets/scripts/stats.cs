@@ -8,7 +8,7 @@ public class stats : MonoBehaviour
     //this is a normal c# script for the stats , it is made for enemys and the player.
     //debug
     public int level;
-    public float Life = 120;
+    public float Life ;
     public float Maxlife = 100;
     public int Damage;
     public int EXPtoNExtLvl = 100;
@@ -23,7 +23,7 @@ public class stats : MonoBehaviour
             Maxlife += (Maxlife / 100) * 20 * level;
             EXPtoNExtLvl = (EXPtoNExtLvl / 100) * 20 * level;
             Damage += 5;
-            Debug.Log(level);
+           
         }
         Life = Maxlife;
 
@@ -33,9 +33,10 @@ public class stats : MonoBehaviour
         EXP += number;
     }
 
-	public  void TakingDamage(int dmg)
+	public void TakingDamage(float dmg)
     {
         Life -= dmg;
+        Debug.Log(dmg + " schould be taking dmg");
     }
 	
     public void EncreaseLevel()
