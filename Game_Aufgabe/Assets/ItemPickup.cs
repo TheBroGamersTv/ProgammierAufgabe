@@ -17,6 +17,12 @@ public class ItemPickup : MonoBehaviour {
 	}
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        Debug.Log("Picking up "+item.name);
+        bool isInInv=Inventory.instance.Add(item);
+        if (isInInv == true)
+        {
+            Destroy(gameObject);
+        }
+        
     }
 }

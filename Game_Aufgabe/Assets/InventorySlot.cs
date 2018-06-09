@@ -5,16 +5,18 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour {
     public Text ItemName;
-    public Item item;
+    Item item;
     public void AddItem(Item newitem)
     {
         item = newitem;
-        ItemName = item.Name;
+        ItemName.text = item.name;
+        ItemName.enabled = true;
     }
     public void ClearItem()
     {
         item = null;
-        ItemName = null;
+        ItemName.text = null;
+        ItemName.enabled = false;
       
     }
         
