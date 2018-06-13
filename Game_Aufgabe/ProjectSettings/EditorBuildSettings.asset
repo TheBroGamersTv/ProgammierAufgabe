@@ -8,13 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: "Assets/scenes/Men\xFC.unity"
-    guid: 6bdd732022168c346b9f1e951f9de2db
-  - enabled: 1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/scenes/Game_aufgabe.unity
     guid: f89cc4065082cae47a0cd0ae46f69069
-  - enabled: 1
+  - enabled: 0
     path: Assets/scenes/test.unity
     guid: 859b7dfbfc120db4083174a199f383f8
+  - enabled: 1
+    path: "Assets/scenes/Men\xFC.unity"
+    guid: 17380471ee7785549908e09c5648917d
+  - enabled: 1
+    path: Assets/scenes/Tutorial.unity
+    guid: 78706471750414444b801498c90c2a15
   m_configObjects: {}

@@ -361,10 +361,10 @@ InputManager:
     m_Name: Inventory
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: b
+    negativeButton: 
     positiveButton: i
     altNegativeButton: b
-    altPositiveButton: b
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000

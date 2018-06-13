@@ -13,6 +13,7 @@ public class Item : ScriptableObject
 
     public virtual void Use()//Because different Items have different abilites(virtual)
     {
+
         Debug.Log("Using" + name);
     }
 }

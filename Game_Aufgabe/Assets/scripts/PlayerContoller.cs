@@ -29,6 +29,7 @@ public class PlayerContoller : MonoBehaviour
     public Inventory inv;
     float LOOKX;
     float LOOKY;
+    public bool InvOn = false;
 
     // Use this for initialization
     void Start()
@@ -42,13 +43,41 @@ public class PlayerContoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
-        if (Input.GetKeyDown(KeyCode.I))
+        /*  if (EventSystem.current.IsPointerOverGameObject())
+              return;*/
+
+        if (Input.GetKeyDown(KeyCode.I))//if inv is on the cursor will be visible and time will be frozen
+        {
+            if (InvOn == true)
+            {
+                InvOn = false;
+                Time.timeScale = 1.0f;
+                Cursor.visible = false;
+            }
+            else
+            {
+                InvOn = true;
+                Time.timeScale = 0.0f;
+                Cursor.visible = true;
+            }
+          
+        }
+      /*  if (Input.GetKeyDown(KeyCode.B))
+        {
+            if (InvOn == true) { }
+            InvOn = false;
+            Time.timeScale = 1.0f;
+            Cursor.visible = false;
+        }*/
+        /*if (Input.GetKeyDown(KeyCode.I))
         {
             OnInventoryUI();
+        }*/
+        if (InvOn == false)
+        {
+            Movement();
         }
-        Movement();
+
         if (Input.GetKeyDown(KeyCode.Z) && TimestopAllowed)
         {
             //Timestop = true;

@@ -17,12 +17,16 @@ public class ItemPickup : MonoBehaviour {
 	}
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Picking up "+item.name);
-        bool isInInv=Inventory.instance.Add(item);
-        if (isInInv == true)
+        if (other.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            Debug.Log("Picking up " + item.name);
+            bool isInInv = Inventory.instance.Add(item);
+            if (isInInv == true)
+            {
+                Destroy(gameObject);
+            }
         }
+        
         
     }
 }

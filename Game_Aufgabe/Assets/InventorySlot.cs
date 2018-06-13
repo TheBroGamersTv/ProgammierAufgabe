@@ -10,7 +10,7 @@ public class InventorySlot : MonoBehaviour {
     public void AddItem(Item newitem)
     {
         item = newitem;
-        ItemName.text = item.name;
+        ItemName.text = newitem.name;
         ItemName.enabled = true;
         removeButton.interactable = true;//damit falls ein Item da ist um es zu entfernen zu lönnen mit dem button
     }
@@ -28,6 +28,10 @@ public class InventorySlot : MonoBehaviour {
     }
     public void UseItem()//um das Item benutzen zu können 
     {
+        item = null;
+        ItemName.text = null;
+        ItemName.enabled = false;
+        removeButton.interactable = false;
         if (item != null)
         {
             item.Use();
