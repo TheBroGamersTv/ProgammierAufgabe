@@ -18,3 +18,6 @@ public class Interactable : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<PlayerContoller>();
     }
 }
+
+
+//This Script isn't in use <-----------------------

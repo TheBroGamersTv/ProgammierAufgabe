@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 public class PlayerContoller : MonoBehaviour
@@ -32,7 +33,7 @@ public class PlayerContoller : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+
         //here we attach the playercontoller to player when the script has a charaktercontroller
         player = this.GetComponent<CharacterController>();
 
@@ -41,7 +42,12 @@ public class PlayerContoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            OnInventoryUI();
+        }
         Movement();
         if (Input.GetKeyDown(KeyCode.Z) && TimestopAllowed)
         {
@@ -71,12 +77,16 @@ public class PlayerContoller : MonoBehaviour
             Jumping = true;
         }
         JUMP();
-        if (Input.GetMouseButton(1))
-        {
-           //Camera cam = Camera.camera;
-         //  Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-           
-        }
+        // if (Input.GetMouseButton(1))
+        // {
+        //Camera cam = Camera.camera;
+        //  Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
+        //}
+    }
+    public void OnInventoryUI()
+    {
+
     }
     public void Inverted(bool IsInverted)
     {
