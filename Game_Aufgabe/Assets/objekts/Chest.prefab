@@ -40,7 +40,6 @@ GameObject:
   - component: {fileID: 33726925733598416}
   - component: {fileID: 114234867859697234}
   - component: {fileID: 64880666967256766}
-  - component: {fileID: 95370873307707954}
   - component: {fileID: 114013047174308060}
   m_Layer: 0
   m_Name: chest bottom
@@ -231,24 +230,6 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1574304364076658}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c4a61180821f90841af5a5544f0ae5a2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &95370873307707954
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1417963222674166}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c4a61180821f90841af5a5544f0ae5a2, type: 2}
