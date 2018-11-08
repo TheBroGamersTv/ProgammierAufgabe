@@ -30,6 +30,7 @@ public class PlayerContoller : MonoBehaviour
     float LOOKX;
     float LOOKY;
     public bool InvOn = false;
+    public bool ESCON = false;
 
     // Use this for initialization
     void Start()
@@ -62,18 +63,35 @@ public class PlayerContoller : MonoBehaviour
             }
           
         }
-      /*  if (Input.GetKeyDown(KeyCode.B))
+
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (InvOn == true) { }
-            InvOn = false;
-            Time.timeScale = 1.0f;
-            Cursor.visible = false;
-        }*/
+            if (ESCON == true)
+            {
+                ESCON = false;
+                Time.timeScale = 1.0f;
+                Cursor.visible = false;
+            }
+            else
+            {
+                ESCON = true;
+                Time.timeScale = 0.0f;
+                Cursor.visible = true;
+            }
+
+        }
+        /*  if (Input.GetKeyDown(KeyCode.B))
+          {
+              if (InvOn == true) { }
+              InvOn = false;
+              Time.timeScale = 1.0f;
+              Cursor.visible = false;
+          }*/
         /*if (Input.GetKeyDown(KeyCode.I))
         {
             OnInventoryUI();
         }*/
-        if (InvOn == false)
+        if (InvOn == false&&ESCON ==false)
         {
             Movement();
         }

@@ -8,6 +8,7 @@ public class InventoryUI : MonoBehaviour
     InventorySlot[] slots;
     Inventory inventory;
     public GameObject inventoryUI;
+    public GameObject escobjektui;
     // Use this for initialization
     void Start()
     {
@@ -22,6 +23,10 @@ public class InventoryUI : MonoBehaviour
         if (Input.GetButtonDown("Inventory"))
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
+        }
+        if(Input.GetButton("Option"))
+        {
+            escobjektui.SetActive(!escobjektui.activeSelf);
         }
         
     }
